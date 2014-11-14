@@ -1,0 +1,78 @@
+<html>
+<title>This.html</title>
+<head>
+   <script>
+
+	function getValue() {
+	   alert("test");
+	   var x = document.getElementById("myHeader");
+	   alert(x.innerHTML);
+}   
+   
+	function myFunction() {
+	   document.getElementById("joesclass").innerHTML = Date()
+}
+
+	function newFunction() {
+	   document.getElementById("joesonloadclass").innerHTML = "page load: " +Date()
+}
+
+    function aFunction() {
+	var x, text ;
+	
+	x = document.getElementById("numb").value;
+	
+	if( isNaN(x) || x < 5 || x > 7 ) 
+		text = "Input not valid";
+	else  
+		text = "Input OK";
+	
+	document.getElementById("demo").innerHTML = text;
+}	
+
+   </script>
+</head>
+<body onload="newFunction()">
+<h1 id="myHeader" onclick="getValue()">Click Me!</h1>
+<script>
+// w2=window.open("http://www.w3schools.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+</script>
+
+<p id="demo"></p>
+<input id="numb" type="text">
+<button type="button" onclick="aFunction()">Submit</button>
+<br />
+Please input a number above between 5 and 7
+
+<p> initial value is:  initial value </p>
+<p id="joesonloadclass">initial value </p>
+
+<p id="joesclass">This will change to date</p>
+<p id="joe"> <p>
+
+<script>
+var x = 3;
+var y = 15;
+document.getElementById("joe").innerHTML = x*y
+</script>
+
+<button type="button" onclick="myFunction()">Click for Date</button>
+<br />
+<script>
+document.write(" change text ");
+</script>
+
+<h1>A Short Sample File</h1>
+This is a short sample file to show you what
+some basic HTML code looks like.
+<p>
+Remember to use a paragraph tag between 
+paragraphs.
+</p>
+<p></p>
+<label for="file">Upload Image:</label>
+    <input type="file" name="file" id="file"/><br><br>
+    <input type="submit" value="Upload Image"/>
+    <br><br> 
+</body>
+</html>
